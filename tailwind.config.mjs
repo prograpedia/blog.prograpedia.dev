@@ -6,5 +6,6 @@ export default {
   },
   plugins: [
     require('@tailwindcss/typography'),
+    require('@astrojs/starlight-tailwind')()
   ],
-}
+};

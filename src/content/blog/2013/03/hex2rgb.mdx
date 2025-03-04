@@ -1,0 +1,66 @@
+---
+title: "HEX2RGB"
+description: "Convertir un color en formato hexadecimal a RGB"
+pubDate: 2013-03-07 09:03:00
+author: Cristian Torres
+---
+Debido a que ahora trabajo como maquetador ;) he andado navegando por algunas páginas web (entre ellas: http://www.javascripter.net/) por lo que necesitando convertir los colores que se utilizan en la web, pasarlos de HEX a RGB o viceversa pues encontré esta sencilla solución:<br />
+
+<div className="flex flex-wrap">
+  <div>
+    HEX: <input className="border-2 rounded border-black " type="text" id="hex"/> <input
+    className="border-2 rounded border-black px-3 bg-red-400" type="button" id="to" value="HEX2RGB"/><br/>
+  </div>
+  <div>
+    R: <input className="border-2 rounded border-black " type="text" id="r"/> G: <input
+    className="border-2 rounded border-black " type="text" id="g"/> B: <input class="border-2 rounded border-black " type="text" id="b"/><br/>
+  </div>
+</div>
+
+Si desean el código para realizar esta increíble hazaña:<br />
+
+```js
+function hexToR(h) {
+  return parseInt((cutHex(h)).substring(0,2),16);
+}
+
+function hexToG(h) {
+  return parseInt((cutHex(h)).substring(2,4),16);
+}
+
+function hexToB(h) {
+  return parseInt((cutHex(h)).substring(4,6),16);
+}
+
+function cutHex(h) {
+  return (h.charAt(0)==="#") ? h.substring(1,7) : h;
+}
+```
+
+
+<script>{`
+    const $ = document.querySelector.bind(document);
+    $('#to').addEventListener('click', function(){
+        var hex = $('#hex').value;
+        $('#r').value = (hexToR(hex));
+        $('#g').value = (hexToG(hex));
+        $('#b').value = (hexToB(hex));
+    });
+
+    function hexToR(h) {
+         return parseInt((cutHex(h)).substring(0,2),16);
+    }
+
+    function hexToG(h) {
+         return parseInt((cutHex(h)).substring(2,4),16);
+    }
+
+    function hexToB(h) {
+         return parseInt((cutHex(h)).substring(4,6),16);
+    }
+
+    function cutHex(h) {
+         return (h.charAt(0)=="#") ? h.substring(1,7) : h;
+    }
+`}
+</script>
