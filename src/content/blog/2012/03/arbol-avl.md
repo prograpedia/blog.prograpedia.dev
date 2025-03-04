@@ -3,6 +3,8 @@ title: "(Visual Basic .Net) Árbol AVL"
 description: "Implementación de Árbol AVL en Visual Basic .NET"
 pubDate: 2012-03-14 15:56:00
 author: Cristian Torres
+#image: https://placeholdr.ai/4b5262ce-81a1-4fee-8108-93689cd87f28/300/200
+image: ./assets/4b5262ce-81a1-4fee-8108-93689cd87f28.png
 ---
 ```vbnet
 Public Class ArbolAVL

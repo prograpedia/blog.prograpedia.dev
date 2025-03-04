@@ -8,8 +8,11 @@ const { frontmatter } = Astro.props;
 <Layout title={frontmatter.title} description={frontmatter.description}>
   <article class="prose lg:prose-xl dark:prose-invert dark:lg:prose-xl mx-auto mb-10">
     <h1>{frontmatter.title}</h1>
-      Last updated: {frontmatter.lastUpdated}
-    <p class="text-gray-600">Publicado el {formatDate(frontmatter.pubDate)} por {frontmatter.author}</p>
+    <p class="text-gray-600">
+        Publicado el {formatDate(frontmatter.pubDate)} por {frontmatter.author}
+        <br/>
+        {frontmatter.lastUpdated && `Última actualización: ${frontmatter.lastUpdated}`}
+    </p>
     <slot />
   </article>
   <script id="giscus-loader" src="https://giscus.app/client.js"

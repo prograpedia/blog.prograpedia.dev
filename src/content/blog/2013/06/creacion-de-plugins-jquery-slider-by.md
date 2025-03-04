@@ -3,6 +3,8 @@ title: Creación de Plugins jQuery (Slider by Cristian Torres)
 description: Aprende a crear plugins jQuery con este tutorial paso a paso. En este caso, un slider de imágenes.
 pubDate: 2013-06-12 15:37:00
 author: Cristian Torres
+#image: https://placeholdr.ai/8b0890ed-1034-4155-811a-be5dbf863130/300/200
+image: ./assets/8b0890ed-1034-4155-811a-be5dbf863130.png
 ---
 ```js title="jquery.plugin.js"
 (function ($) {
