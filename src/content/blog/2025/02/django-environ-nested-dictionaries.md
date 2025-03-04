@@ -26,12 +26,23 @@ env.read_env('path/to/.env')
 AWS_S3_BUCKETS = {
     key: env.parse_value(value, {}) 
     for (key, value) in dict([
-        dictionary.split("=", 1)  # Each nested dictionary is defined as key=subkey=value;subkey=value
+        dictionary.split("=", 1)  # 1
         for dictionary in env.list('AWS_S3_BUCKETS')
     ]).items()
 }
 ...
 ```
+
+El formato de cada diccionario anidado dentro de la variable en el archivo .env sería el siguiente:
+
+<span class="text-red-400">nested_dict1</span>=<span class="text-blue-400">subkey1_for_nested_dict1</span>=<span class="text-green-400">value</span>;<span class="text-blue-400">subkey2_for_nested_dict1</span>=<span class="text-green-400">value</span>
+
+Y así lo podemos para cada diccionario anidado, usando <strong class="text-orange-400">,</strong> como separador.
+
+```dotenv title=".env"
+AWS_S3_BUCKETS='BUCKET1=name=bucket1;key_id=key_id1;secret=secret1,BUCKET2=name=bucket2;key_id=key_id2;secret=secret2'
+```
+
 <br/>
 
 :::tip
