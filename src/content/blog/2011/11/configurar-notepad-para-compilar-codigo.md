@@ -4,7 +4,7 @@ description: "Configurar Notepad++ para compilar código java utilizando un arch
 pubDate: 2011-11-22 09:57:00
 author: "Cristian Torres"
 #image: https://placeholdr.ai/9708e138-db71-4239-8cc3-3f09a91db085/300/200
-image: ./assets/9708e138-db71-4239-8cc3-3f09a91db085.png
+image: /assets/9708e138-db71-4239-8cc3-3f09a91db085.png
 ---
 A mucha gente le encanta la simplicidad y utilidad de este bloc de notas avanzado. Una de sus utilidades es la de ejecutar comandos externos, de manera que aprovechando esta función podemos compilar y ejecutar nuestros programas en java, veamos como se hace:
 

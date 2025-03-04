@@ -4,7 +4,7 @@ description: Módulo de conexión dinámica para SQL Server
 pubDate: 2011-12-11 21:09:00
 author: Cristian Torres
 #image: https://placeholdr.ai/508ed4f0-ec28-4dbb-af17-84ec8d0b653b/300/200
-image: ./assets/508ed4f0-ec28-4dbb-af17-84ec8d0b653b.png
+image: /assets/508ed4f0-ec28-4dbb-af17-84ec8d0b653b.png
 ---
 Este módulo nos permite conectarnos a una base de datos alojada en "MS Sql Server".
 

@@ -4,7 +4,7 @@ description: Aprende a eliminar registros duplicados de una tabla en MySQL.
 pubDate: 2014-07-17 14:52:00
 author: Cristian Torres
 #image: https://placeholdr.ai/f68ab24a-07b0-4429-8749-31a1a9a21dce/300/200
-image: ./assets/f68ab24a-07b0-4429-8749-31a1a9a21dce.png
+image: /assets/f68ab24a-07b0-4429-8749-31a1a9a21dce.png
 ---
 Para eliminar los registros duplicados de una tabla en MySQL se ejecuta el siguiente estamento:<br />
 

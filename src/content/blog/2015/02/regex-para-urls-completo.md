@@ -4,7 +4,7 @@ description: Aprende a crear expresiones regulares para validar y extraer inform
 pubDate: 2015-02-03 14:43:00
 author: Cristian Torres
 #image: https://placeholdr.ai/7abb3c14-3a3d-4b50-a069-98a2f72508f7/300/200
-image: ./assets/7abb3c14-3a3d-4b50-a069-98a2f72508f7.png
+image: /assets/7abb3c14-3a3d-4b50-a069-98a2f72508f7.png
 ---
 
 Esta regex sirve para verificar urls completas con protocolo, subdominio, dominio, superdominio, ruta y

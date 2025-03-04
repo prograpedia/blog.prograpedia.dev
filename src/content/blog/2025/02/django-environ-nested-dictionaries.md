@@ -4,7 +4,7 @@ description: "Cómo manejar diccionarios anidados con django-environ"
 pubDate: 2025-02-27
 author: "Cristian Torres"
 #image: https://placeholdr.ai/49e236bd-6b07-44f5-a868-a31e5bc3c315/300/200
-image: ./assets/49e236bd-6b07-44f5-a868-a31e5bc3c315.png
+image: /assets/49e236bd-6b07-44f5-a868-a31e5bc3c315.png
 ---
 Hace poco estaba tratando de encontrar la forma de cargar una serie de diccionarios anidados usando django-environ, al estilo de la configuración para la base de datos en django.
 

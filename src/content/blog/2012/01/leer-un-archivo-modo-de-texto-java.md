@@ -4,7 +4,7 @@ description: "Leer un archivo modo de texto Java"
 pubDate: 2012-01-26 14:36:00
 author: "Cristian Torres"
 #image: https://placeholdr.ai/c671f37d-bdd1-40f2-aa35-79eebe694607/300/200
-image: ./assets/c671f37d-bdd1-40f2-aa35-79eebe694607.png
+image: /assets/c671f37d-bdd1-40f2-aa35-79eebe694607.png
 ---
 
 ```java
