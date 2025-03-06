@@ -19,10 +19,9 @@ AWS_S3_BUCKETS='BUCKET1=name=bucket1;key_id=key_id1;secret=secret1,BUCKET2=name=
 ```
 
 El problema es que django-environ no puede realizar la carga de diccionarios
-anidados, pero, sí puede cargar listas y "
-parsear" diccionarios anidados (1 nivel de anidación máximo), si juntamos esas
-dos capacidades podemos crear una nueva
-definición de variables para este tipo.
+anidados, pero, sí puede cargar listas y "parsear" diccionarios anidados (1
+nivel de anidación máximo), si juntamos esas dos capacidades podemos crear una
+nueva definición de variables para este tipo.
 
 Para cargar este nuevo tipo de valores necesitamos hacerlo en nuestro código de
 la siguiente manera:
@@ -45,10 +44,9 @@ AWS_S3_BUCKETS = {
 El formato de cada diccionario anidado dentro de la variable en el archivo .env
 sería el siguiente:
 
-<span class="text-red-400">nested_dict1</span>=<span class="text-blue-400">
-subkey1_for_nested_dict1</span>=<span class="text-green-400">
-value</span>;<span class="text-blue-400">
-subkey2_for_nested_dict1</span>=<span class="text-green-400">value</span>
+<div>
+<span class="text-red-400">nested_dict1</span>=<span class="text-blue-400">subkey1_for_nested_dict1</span>=<span class="text-green-400">value</span>;<span class="text-blue-400">subkey2_for_nested_dict1</span>=<span class="text-green-400">value</span>
+</div>
 
 Y así lo podemos para cada diccionario anidado,
 usando <strong class="text-orange-400">,</strong> como separador.
