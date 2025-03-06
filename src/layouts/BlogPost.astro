@@ -1,20 +1,24 @@
 ---
-import Layout from './Layout.astro';
-import { formatDate } from '../utils';
+import Layout from "./Layout.astro";
+import { formatDate } from "../utils";
+import PrevNextNav from "../components/PrevNextNav.astro";
 
 const { frontmatter } = Astro.props;
 ---
 
 <Layout title={frontmatter.title} description={frontmatter.description}>
-  <article class="prose lg:prose-xl dark:prose-invert dark:lg:prose-xl mx-auto mb-10">
+  <article
+    class="prose lg:prose-xl dark:prose-invert dark:lg:prose-xl mx-auto mb-10">
     <h1>{frontmatter.title}</h1>
     <p class="text-gray-600">
-        Publicado el {formatDate(frontmatter.pubDate)} por {frontmatter.author}
-        <br/>
-        {frontmatter.lastUpdated && `Última actualización: ${frontmatter.lastUpdated}`}
+      Publicado el {formatDate(frontmatter.pubDate)} por {frontmatter.author}
+      <br />
+      {frontmatter.lastUpdated && `Última actualización: ${frontmatter.lastUpdated}`}
     </p>
     <slot />
   </article>
+  <PrevNextNav/>
+  <br/>
   <script id="giscus-loader" src="https://giscus.app/client.js"
           data-repo="prograpedia/blog.prograpedia.dev"
           data-repo-id="R_kgDONSDd1Q"

@@ -4,19 +4,27 @@ description: "Convertir un color en formato hexadecimal a RGB"
 pubDate: 2013-03-07 09:03:00
 author: Cristian Torres
 
-[//]: # (image: https://placeholdr.ai/13164c6c-6ebd-49d5-ac09-b7cb4de69804/300/200)
+#image: https://placeholdr.ai/13164c6c-6ebd-49d5-ac09-b7cb4de69804/300/200
 image: /assets/13164c6c-6ebd-49d5-ac09-b7cb4de69804.png
 ---
 Debido a que ahora trabajo como maquetador ;) he andado navegando por algunas páginas web (entre ellas: http://www.javascripter.net/) por lo que necesitando convertir los colores que se utilizan en la web, pasarlos de HEX a RGB o viceversa pues encontré esta sencilla solución:<br />
 
-<div className="flex flex-wrap">
-  <div>
-    HEX: <input className="border-2 rounded border-black " type="text" id="hex"/> <input
-    className="border-2 rounded border-black px-3 bg-red-400" type="button" id="to" value="HEX2RGB"/><br/>
+<div className="flex flex-wrap gap-2">
+  <div className="flex gap-2">
+      <label>HEX:</label>
+      <input className="border-2 rounded border-black dark:border-white px-2"
+             type="text" id="hex" />
+      <input
+        className="border-2 rounded text-white border-black px-3 bg-gray-800 dark:bg-gray-200 dark:text-black"
+        type="button" id="to" value="Convertir" />
   </div>
-  <div>
-    R: <input className="border-2 rounded border-black " type="text" id="r"/> G: <input
-    className="border-2 rounded border-black " type="text" id="g"/> B: <input class="border-2 rounded border-black " type="text" id="b"/><br/>
+  <div className="flex gap-2">
+    <label>R:</label><input disabled className="border-2 rounded border-black dark:border-white px-2"
+              type="text" id="r" />
+    <label>G:</label><input disabled className="border-2 rounded border-black dark:border-white px-2"
+              type="text" id="g" />
+    <label>B:</label><input disabled className="border-2 rounded border-black dark:border-white px-2"
+              type="text" id="b" />
   </div>
 </div>
 

@@ -4,6 +4,7 @@ description: "Módulo de conexión para VB .Net"
 pubDate: 2011-06-16 15:07:00
 author: "Cristian Torres"
 ---
+
 ```vbnet 
 Imports System.Data.SqlClient
 Imports System.Data.OleDb

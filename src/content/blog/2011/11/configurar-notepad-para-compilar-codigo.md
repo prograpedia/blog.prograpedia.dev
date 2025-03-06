@@ -6,11 +6,20 @@ author: "Cristian Torres"
 #image: https://placeholdr.ai/9708e138-db71-4239-8cc3-3f09a91db085/300/200
 image: /assets/9708e138-db71-4239-8cc3-3f09a91db085.png
 ---
-A mucha gente le encanta la simplicidad y utilidad de este bloc de notas avanzado. Una de sus utilidades es la de ejecutar comandos externos, de manera que aprovechando esta función podemos compilar y ejecutar nuestros programas en java, veamos como se hace:
 
-1.- Creamos un archivo por lotes 'compilar_java.bat' con lo siguiente:
+A mucha gente le encanta la simplicidad y utilidad de este bloc de notas
+avanzado. Una de sus utilidades es la de
+ejecutar comandos externos, de manera que aprovechando esta función podemos
+compilar y ejecutar nuestros programas en
+java, veamos como se hace:
 
-El archivo por lotes debe estar en la misma carpeta donde se encuentra el archivo que vamos a compilar.
+1. Creamos un archivo por lotes `compilar_java.bat` con el siguiente contenido:
+
+> [!TIP]
+El archivo por lotes debe estar en la misma carpeta donde se encuentra el
+archivo que vamos a compilar.
+
+<br/> 
 
 ```bash title="compilar_java.bat"
 echo off
@@ -25,11 +34,20 @@ echo .
 java %2
 pause
 ```
-:::note
+<br/>
+
+> [!IMPORTANT/IMPORTANTE]
 La variable PATH debemos cambiarla por nuestro compilador de java instalado
+en nuestro sistema.
 
-:::
+2. Vamos a notepad++, damos al menu ejecutar y escribimos **_$(NPP_DIRECTORY)_**
+y damos a ejecutar. Esta operación nos abrirá la carpeta desde la cual se
+ejecuta el programa, es ahí donde debemos guardar el archivo
+`compilar_java.bat`.
 
-2.-Vamos a notepad++, damos al menu ejecutar y escribimos<b><i> $(NPP_DIRECTORY) </i></b>y damos a ejecutar. Esta operación nos abrirá la carpeta desde la cual se ejecuta el programa, es ahí donde debemos guardar el archivo 'compilar_java.bat'.
+3. Una vez guardado el archivo por lotes vamos de nuevo al menu 'ejecutar' e
+ingresamos el siguiente texto:
 
-3.-Una vez guardado el archivo por lotes vamos de nuevo al menu 'ejecutar' y ponemos el siguiente texto: $(NPP_DIRECTORY)\compilar_java.bat $(FILE_NAME) $(NAME_PART)
+```bash
+$(NPP_DIRECTORY)\compilar_java.bat $(FILE_NAME) $(NAME_PART)
+```

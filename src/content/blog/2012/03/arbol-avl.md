@@ -6,6 +6,7 @@ author: Cristian Torres
 #image: https://placeholdr.ai/4b5262ce-81a1-4fee-8108-93689cd87f28/300/200
 image: /assets/4b5262ce-81a1-4fee-8108-93689cd87f28.png
 ---
+
 ```vbnet
 Public Class ArbolAVL
     Public raiz As Nodo

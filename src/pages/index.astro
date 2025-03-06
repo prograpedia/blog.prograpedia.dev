@@ -1,9 +1,9 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import { getCollection } from 'astro:content';
+import Layout from "../layouts/Layout.astro";
+import { getCollection } from "astro:content";
 import Blog from "../components/Blog.astro";
 
-const posts = await getCollection('blog');
+const posts = await getCollection("blog");
 const latestPosts = posts
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
   .slice(0, 6);
@@ -13,21 +13,23 @@ const latestPosts = posts
   <section class="prose dark:prose-invert max-w-none fuck text-center mb-12">
     <h1 class="mb-4">Bienvenido a Prograpedia</h1>
     <p class="text-gray-600 dark:text-gray-400">
-        Tu guía comprensiva al conocimiento y experiencias de programación.
+      Tu guía comprensiva al conocimiento y experiencias de programación.
     </p>
   </section>
 
   <section>
-    <h2 class="text-3xl font-bold mb-6 text-gray-600 dark:text-gray-400">Ultimas entradas</h2>
+    <h2 class="text-3xl font-bold mb-6 text-gray-600 dark:text-gray-400">Ultimas
+      entradas</h2>
     <div class="space-y-8 grid gap-3 grid-cols-2">
       {latestPosts.map(post => (
         <Blog post={post}></Blog>
       ))}
-        <div></div>
+      <div></div>
     </div>
-    
+
     <div class="mt-8 text-center">
-      <a href="/blog" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">
+      <a href="/blog"
+         class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">
         View All Posts
       </a>
     </div>

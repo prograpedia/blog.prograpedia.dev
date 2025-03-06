@@ -1,5 +1,5 @@
 ---
-import "../styles/globals.css";
+import "../styles/global.css";
 import ThemeIcon from "../components/ThemeIcon.astro";
 
 interface Props {
@@ -7,40 +7,46 @@ interface Props {
   description?: string;
 }
 
-const {title, description = "A programming knowledge base and blog"} = Astro.props;
+const {
+  title,
+  description = "A programming knowledge base and blog",
+} = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en" class="light">
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="description" content={description}/>
-    <meta name="viewport" content="width=device-width"/>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
-    <meta name="generator" content={Astro.generator}/>
-    <title>{title} | Prograpedia</title>
+  <meta charset="UTF-8" />
+  <meta name="description" content={description} />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="generator" content={Astro.generator} />
+  <title>{title} | Prograpedia</title>
 
 </head>
 <body class="bg-slate-100 dark:bg-slate-950 text-white-50 dark:text-white-950">
 <header class="bg-white dark:bg-gray-900 shadow-sm">
-    <nav class="max-w-4xl mx-auto px-4 py-3">
-        <div class="flex justify-between items-center">
-            <a href="/" class="text-xl font-bold text-gray-900 dark:text-gray-100">Prograpedia</a>
-            <div class="space-x-6 flex items-center">
-                <a href="/" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">Inicio</a>
-                <a href="/blog" class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">Blog</a>
-                <ThemeIcon></ThemeIcon>
-            </div>
-        </div>
-    </nav>
+  <nav class="max-w-4xl mx-auto px-4 py-3">
+    <div class="flex justify-between items-center">
+      <a href="/" class="text-xl font-bold text-gray-900 dark:text-gray-100">Prograpedia</a>
+      <div class="space-x-6 flex items-center">
+        <a href="/"
+           class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">Inicio</a>
+        <a href="/blog"
+           class="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">Blog</a>
+        <ThemeIcon></ThemeIcon>
+      </div>
+    </div>
+  </nav>
 </header>
 <main class="max-w-4xl mx-auto px-4 py-8">
-    <slot/>
+  <slot />
 </main>
 <footer class="bg-white dark:bg-gray-900 border-t mt-8">
-    <div class="max-w-4xl mx-auto px-4 py-6 text-center text-gray-600 dark:text-gray-400">
-        © 2011-{new Date().getFullYear()} Prograpedia. Built with Astro.
-    </div>
+  <div
+    class="max-w-4xl mx-auto px-4 py-6 text-center text-gray-600 dark:text-gray-400">
+    © 2011-{new Date().getFullYear()} Prograpedia. Built with Astro.
+  </div>
 </footer>
 </body>
 </html>

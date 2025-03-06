@@ -1,0 +1,36 @@
+---
+import { getCollection } from "astro:content";
+import { Icon } from "astro-icon/components";
+
+const posts = (await getCollection("blog"))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const currentPostIndex = posts.findIndex((post) => {
+  console.log(post.id, post.slug, Astro.params.slug);
+  return post.slug == Astro.params.slug;
+});
+const previousPost = currentPostIndex + 1 === posts.length ? undefined : posts[ currentPostIndex + 1 ];
+const nextPost = currentPostIndex === 0 ? undefined : posts[ currentPostIndex - 1 ];
+---
+
+{
+  (previousPost || nextPost) &&
+  <nav class="flex justify-between text-gray-600 dark:text-gray-400">
+    {previousPost && (
+        <a href={`/blog/${previousPost.slug}/`} class="flex items-center gap-2 rounded-lg px-3 py-2 border-2 text-left">
+          <Icon name="mdi:arrow-left" />
+          <div class="flex flex-col max-w-48">
+            <div class="text-muted dark:text-muted-inverse text-xs">Post Anterior</div>
+            <div class="truncate max-w-full overflow-hidden max-h-[var(--text-lg)]">{previousPost.data.title}</div>
+          </div>
+        </a>) || <span></span>}
+    {nextPost && (
+        <a href={`/blog/${nextPost.slug}/`} class="flex items-center gap-2 rounded-lg px-3 py-2 border-2 text-right">
+          <div class="flex flex-col max-w-48">
+            <div class="text-muted dark:text-muted-inverse text-xs">Siguiente Post</div>
+            <div class="truncate max-w-full overflow-hidden max-h-[var(--text-lg)]">{nextPost.data.title}</div>
+          </div>
+          <Icon name="mdi:arrow-right" />
+        </a>) || <span></span>}
+  </nav>
+  }
